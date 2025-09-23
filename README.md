@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+### ✨ ویژگی‌ها
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  * **طراحی ساده و مدرن:** رابط کاربری تمیز با تمرکز بر تجربه کاربری.
+  * **طراحی واکنش‌گرا:** نمایش مناسب در دستگاه‌های مختلف از موبایل تا دسکتاپ.
+  * **تم تاریک و روشن:** امکان انتخاب بین دو حالت نمایش برای مطالعه راحت‌تر.
+  * **فیلتر نمونه‌کارها:** قابلیت دسته‌بندی و فیلتر کردن پروژه‌ها.
+  * **فرم تماس:** قابلیت ارسال مستقیم ایمیل از طریق وب‌سایت با سرویس EmailJS.
+  * **مسیریابی سمت کاربر:** ناوبری سریع بین صفحات با استفاده از React Router.
 
-Currently, two official plugins are available:
+### 🛠️ ابزارها و تکنولوژی‌ها
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+این پروژه با استفاده از ابزارها و کتابخانه‌های زیر ساخته شده است:
 
-## Expanding the ESLint configuration
+  * **فریم‌ورک:** [React](https://react.dev/)
+  * **زبان:** [TypeScript](https://www.typescriptlang.org/)
+  * **ابزار ساخت:** [Vite](https://vitejs.dev/)
+  * **استایل‌دهی:** [Tailwind CSS](https://tailwindcss.com/)
+  * **مسیریابی:** [React Router](https://reactrouter.com/)
+  * **آیکون‌ها:** [React Icons](https://react-icons.github.io/react-icons/)
+  * **ارسال ایمیل:** [EmailJS](https://www.emailjs.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🚀 راه‌اندازی پروژه
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+برای اجرای این پروژه به صورت محلی، مراحل زیر را دنبال کنید:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**۱. کلون کردن ریپازیتوری:**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/rshorche/myportfolio.git
+cd myportfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**۲. نصب وابستگی‌ها:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# یا
+yarn install
 ```
+
+**۳. تنظیم متغیرهای محیطی:**
+برای فعال‌سازی فرم تماس، یک فایل `.env.local` در ریشه پروژه بسازید و اطلاعات حساب کاربری [EmailJS](https://www.emailjs.com/) خود را در آن وارد کنید.
+
+```.env.local
+VITE_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
+VITE_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
+VITE_EMAILJS_PUBLIC_KEY=YOUR_PUBLIC_KEY
+```
+
+**۴. اجرای سرور توسعه:**
+
+```bash
+npm run dev
+```
+
+پروژه روی آدرس `http://localhost:5173` اجرا خواهد شد.
+
+### 📞 راه‌های ارتباطی
+
+  * **ایمیل:** [rshorche@gmail.com](mailto:rshorche@gmail.com)
+  * **لینکدین:** [linkedin.com/in/rshorche](https://www.linkedin.com/in/rshorche)
+  * **گیت‌هاب:** [github.com/rshorche](https://github.com/rshorche)
+  * **تلگرام:** [t.me/rshorche](https://t.me/rshorche)

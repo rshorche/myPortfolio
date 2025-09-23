@@ -2,7 +2,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import avatar from "../../assets/images/avatar.png";
 import cn from "../../libs/cn";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ProfileInfoProps {
   isOpen: boolean;
@@ -10,7 +10,11 @@ interface ProfileInfoProps {
 }
 
 export default function ProfileInfo({ isOpen, onToggle }: ProfileInfoProps) {
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState<boolean>(true);
+
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
 
   const toggleTheme = () => {
     setIsDark((prv) => !prv);
