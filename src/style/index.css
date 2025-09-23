@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Lalezar";
+  src: url("../assets/fonts/Lalezar-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-lalezar: "Lalezar";
+  --font-vazirmatn: "Vazirmatn";
+
+  --color-c-base: #121212;
+  --color-c-elev: #1e1e1f;
+  --color-c-muted: #2b2b2c;
+  --color-c-soft: #383839;
+  --color-c-text: #fafafa;
+  --color-c-sub: #d6d6d6;
+  --color-c-accent: #ffdb70;
+  --color-c-accent-dark: #fdcf59;
+
+  --shadow-c-depth: -4px 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+@layer base {
+  :root {
+    --color-c-base: #f5f5f4;
+    --color-c-elev: #fafaf9;
+    --color-c-muted: #e7e5e4;
+    --color-c-soft: #d6d3d1;
+    --color-c-text: #292524;
+    --color-c-sub: #78716c;
+    --color-c-accent: #059669;
+    --shadow-c-depth: 0 8px 25px -5px rgba(41, 37, 36, 0.1);
+  }
+
+  .dark {
+    --color-c-base: #121212;
+    --color-c-elev: #1e1e1f;
+    --color-c-muted: #2b2b2c;
+    --color-c-soft: #383839;
+    --color-c-text: #fafafa;
+    --color-c-sub: #d6d6d6;
+    --color-c-accent: #ffdb70;
+    --shadow-c-depth: -4px 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    @apply font-vazirmatn;
+    background-color: var(--color-c-base);
+    color: var(--color-c-text);
+    transition: color, background-color 0.3s ease;
+  }
+}
+
+@layer components {
+  .btn-toggle {
+    @apply absolute -top-1 -left-1 flex h-8 min-w-8 items-center 
+        justify-center rounded-br-2xl rounded-tl-2xl border-r border-t 
+        border-c-soft bg-c-soft text-xs text-c-accent shadow-2xl 
+        transition-all duration-200 lg:hidden
+        hover:border-r-c-accent/50 hover:border-t-c-accent/50 
+        hover:bg-gradient-to-bl from-c-accent/30 via-c-soft to-c-soft;
+  }
+}
