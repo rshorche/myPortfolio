@@ -15,8 +15,8 @@ export const contactData = [
   {
     icon: MdOutlinePhone,
     title: "موبایل",
-    value: "۰۹۱۲۳۴۵۶۷۸۹",
-    href: "tel:+989123456789",
+    value: "۰۹۳۷۷۴۵۷۳۷۰",
+    href: "tel:+989377457370",
   },
   {
     icon: MdOutlineCalendarToday,
